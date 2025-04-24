@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_ID: f65523a982c3eb18cf910b989b57315b
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_APP_ID=f65523a982c3eb18cf910b989b57315b
+    restart: unless-stopped
